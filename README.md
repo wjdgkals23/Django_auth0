@@ -33,13 +33,7 @@
         - pip3(pip) install django
         - django-admin startproject config
         - mv config app
-
-***
-
-- django 프로젝트 구조
-
-***
-
+        
 - JWT 이해하기
 
     - 토큰 기반 인증 시스템
@@ -63,4 +57,30 @@
                 - registered : 토큰에 대한 정보를 담는 클레임
                 - public : 충돌이 방지된 이름 ? 역할 의문??
                 - private : 실제정보 -> 일반 객체 형태
-            - 서명 : 헤더와 내용을 인코딩한 값을 합치 주어진 비밀키로 해쉬하여 생
+            - 서명 : 헤더와 내용을 인코딩한 값을 합치 주어진 비밀키로 해쉬하여 생성
+
+---
+###Day 2 Django Tutorials and Regex
+- django 명령어
+    - 서버 구동 : python manage.py runserver
+    - 
+
+- django 프로젝트 구조
+    - manage.py : 서버 시작 스크립트
+    - settings.py : 웹 사이트 설정 파일
+    - urls.py : 사용되는 url 패턴 설정
+    - catalog : 제작할 앱
+        - models : 해당 앱에서 사용되는 데이터 모델 설정파일
+        - urls : 해당 앱에서 사용되는 주소 목록 (Regex)
+        - views : 해당 앱에서 사용되는 view 지정 (method)
+
+- querysets (데이터를 템플릿에 전송하는 방법)
+    - 모델 참조 : from <appname>.models import <model_name>
+    - 해당 모델 객체조회 : <modelname>.objects.all()
+    - 문자열 조건 조회 : 
+    - 조건 조회 : <modelname>.objects.filter(<model_name.property>=조건).orderby(프로퍼티)
+
+- 정규 표현식
+    - 참조사이트 : https://wikidocs.net/4308
+
+***

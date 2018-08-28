@@ -26,7 +26,7 @@ SECRET_KEY = 'v6@)*gc$2f*a&=!*l*yu=lhgfl)za@+#r6c^ou2(g#m3oetp96'
 DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1','.pythonanywhere.com']
-
+# 허가되는 host name
 
 # Application definition
 
@@ -80,6 +80,7 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+# db 셋팅 mysql 설정법은 과연??
 
 
 # Password validation
@@ -120,3 +121,5 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# css 라이브러리 사용 패턴
+# vuejs 사용하는거 추가 설정 여기서 해야할듯
