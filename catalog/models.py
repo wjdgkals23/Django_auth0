@@ -17,3 +17,7 @@ class Post(models.Model): # 글 작성 모델 제작 # db에 저장될 형태??
 
     def __str__(self): # 타이틀 string 추출 메소드
         return self.title
+
+class Person(models.Model):
+    firstname = models.CharField(max_length=30)
+    lastname = models.CharField(max_length=30)

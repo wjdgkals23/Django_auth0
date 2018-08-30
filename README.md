@@ -7,7 +7,7 @@
 
 ---
 
-###Day 1 파이썬 가상환경 설정 및 장고(Django) 토이 프로젝트 셋팅
+###Part 1 파이썬 가상환경 설정 및 장고(Django) 토이 프로젝트 셋팅
 
 - 파이썬 가상환경 설정하기(mac os using homebrew)
     - 가상환경 tool 설치 및 설정
@@ -60,10 +60,9 @@
             - 서명 : 헤더와 내용을 인코딩한 값을 합치 주어진 비밀키로 해쉬하여 생성
 
 ---
-###Day 2 Django Tutorials and Regex
+###Part 2 Django Tutorials and Regex
 - django 명령어
     - 서버 구동 : python manage.py runserver
-    - 
 
 - django 프로젝트 구조
     - manage.py : 서버 시작 스크립트
@@ -82,5 +81,15 @@
 
 - 정규 표현식
     - 참조사이트 : https://wikidocs.net/4308
+    
+- template 작성
+    - django template : {% %}
 
+- 쿼리셋을 이용한 데이터 로드 및 뷰 로드
+    1. url에 정보 담아서 보내기
+        - a href="{% url 'post_detail' pk=post.pk %}": url 중 name이 post_detail 인 곳으로 pk에 post.pk 정보를 담아서 전송   
+    2. urls 에서 처리하기
+        - url(r'^post/(?P<pk>\d+)/$', views.post_detail, name='post_detail') : 해당 정규식 표현에 맞는 표현들을 views의 post_detail로 전송
+    3. views 에서 처리하기
+        - pk에 담겨있는 정보를 해당되는 모델에서 뽑아내고 타겟 view로 전송하여 로드한다.
 ***
