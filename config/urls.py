@@ -18,5 +18,6 @@ from django.conf.urls import include,url
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'', include('catalog.urls')),
+    url(r'^catalog', include('catalog.urls')),
+    url(r'^', include('auth0login.urls'))
 ]
